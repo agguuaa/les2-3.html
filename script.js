@@ -5,17 +5,15 @@ function displayWelcomeMessage() {
   var age = currentYear - yearOfBirth;
 
   var welcomeMessage = "Hello " + name + "! You are " + age + " years old.";
+  console.log(
+    "The sentence consists of " + welcomeMessage.length + " characters."
+  );
 
   var welcomeElement = document.createElement("h1");
   var textNode = document.createTextNode(welcomeMessage);
   welcomeElement.appendChild(textNode);
 
   document.body.appendChild(welcomeElement);
-
-  // Calculate the number of characters
-  var code = document.documentElement.outerHTML;
-  var charCount = code.length;
-  console.log("The code consists of " + charCount + " characters.");
 }
 
 displayWelcomeMessage();
